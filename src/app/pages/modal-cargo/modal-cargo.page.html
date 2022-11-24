@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">modal-cargo</ion-title>
+
+    <ion-buttons slot="end" (click)="close()">
+      <ion-icon class="close_icon"  name="close-circle"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="register()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>INGRESE LOS CARGOS</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>CEDULA: </ion-label>
+            <ion-input type="text"
+                       name="cedula" 
+                       [(ngModel)]="cedula"
+                       required      
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+  
+        <ion-list>
+          <ion-item>
+            <ion-label>CARGOS: </ion-label>
+            <ion-input type="text"
+                       name="cargo"
+                       [(ngModel)]="cargo"
+                       required
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+  
+      <ion-button color="success" class="btn-guardar" type="submit" [disabled]="formulario.invalid">Guardar</ion-button>
+    </ion-card>
+  </form>
+</ion-content>

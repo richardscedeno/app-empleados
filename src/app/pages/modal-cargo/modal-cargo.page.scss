@@ -1,0 +1,29 @@
+.close_icon {
+  font-size: 25px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+ion-card-header {
+  text-align: center;
+}
+
+ion-card-header > ion-card-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ion-item > ion-label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ion-item > ion-input {
+  font-size: 12px;
+}
+
+.btn-guardar {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+}

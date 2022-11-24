@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">Registrar</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ELIJA UNA OPCION</ion-card-title>     
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button color="medium" (click)="registerEmployee()">Registrar Empleado</ion-button>
+      <ion-button color="medium" (click)="registerPosition()">Registrar Cargo</ion-button> 
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list-header class="list_header" *ngIf="listaEmpleados.length">
+    <ion-label>CEDULA</ion-label>
+    <ion-label>NOMBRES</ion-label>
+    <ion-label>FECHA</ion-label>
+    <ion-label>SUELDO</ion-label>
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of listaEmpleados" class="list_clients">
+    <ion-label text-wrap>{{item.cedula}}</ion-label>
+    <ion-label text-wrap>{{item.nombres}}</ion-label>
+    <ion-label text-wrap>{{item.fechaNacimiento}}</ion-label>
+    <ion-label text-wrap>{{item.sueldo}}</ion-label>
+  </ion-item>
+</ion-content>

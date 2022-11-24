@@ -1,0 +1,39 @@
+ion-card {
+  width: 80%;
+  margin: 0 auto;
+}
+
+ion-card-content {
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid-header {
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid gray;
+  padding: 10px 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-header > ion-col {
+  text-align: center;
+}
+
+.grid-detail {
+  border: 1px solid gray;
+  border-top: none;
+  font-size: 11px;
+}
+
+.grid-detail > ion-col {
+  text-align: center;
+  margin: auto 0;
+}
+
+
+.detail-cargos > ion-row {
+  justify-content: center;
+  margin: 5px;
+}

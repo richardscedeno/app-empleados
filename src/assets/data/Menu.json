@@ -1,0 +1,12 @@
+[
+  {
+      "icon":"newspaper-outline",
+      "nombre":"Registrar",
+      "pagina":"/registrar"
+  },
+  {
+      "icon":"reader-outline",
+      "nombre":"Listar",
+      "pagina":"/listar"
+  }
+]

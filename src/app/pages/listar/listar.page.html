@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title mode="ios">Listar</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content *ngIf="listaEmpleados.length === 0">
+      <ion-label>No existen empleados registrados. Registre empleados para poder visualizarlos en este apartado.</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid *ngIf="listaEmpleados.length > 0">
+  <!-- <ion-grid> -->
+    <ion-row class="grid-header">
+      <ion-col size="2">CEDULA</ion-col>
+      <ion-col size="4">NOMBRES</ion-col>
+      <ion-col size="2">FECHA_NAC</ion-col>
+      <ion-col size="2">CARGOS</ion-col>
+      <ion-col size="2">SUELDO</ion-col>
+    </ion-row>
+
+    <ion-row  class="grid-detail" *ngFor="let data of listaEmpleados">
+      <ion-col size="2">{{data.cedula}}</ion-col>
+      <ion-col size="4">{{data.nombres}}</ion-col>
+      <ion-col size="2">{{data.fechaNacimiento}}</ion-col>
+      <ion-col *ngIf="data.cargos === undefined"> --- </ion-col>
+      <ion-col class="detail-cargos">
+        <ion-row *ngFor="let cargo of data.cargos">
+          {{cargo.nombre}}
+        </ion-row>
+      </ion-col>
+      <ion-col size="2">{{data.sueldo}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
